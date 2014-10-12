@@ -1,0 +1,3 @@
+<koken:load>
+	<meta http-equiv="refresh" content="0;URL=http://www.tumblr.com/share/photo?source={{ content.presets.large.url url_encode="true"  }}&caption=%3Cp%3E%3Cstrong%3E%3Ca href=&quot;{{ content.url url_encode="true" }}&quot; title=&quot;{{ content.title|content.filename }}&quot;%3E{{ content.title|content.filename }}%3C/a%3E%3C/strong%3E%3C/p%3E%3Cp%3E{{ content.caption }}%3C/p%3E&click_thru={{ content.url url_encode="true" }}">
+</koken:load>

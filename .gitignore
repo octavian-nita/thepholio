@@ -1,0 +1,37 @@
+# Exclude Koken content, cache and logs
+#
+/storage/originals/*
+/storage/cache/*
+/storage/tmp/*
+/app/application/datamapper/cache/*
+/app/cache/*
+/app/logs/*
+
+
+# Include these files in previously blocked directories
+#
+!/app/cache/index.html
+!/app/logs/index.html
+
+
+# Exclude Koken configuration
+#
+/storage/configuration/database.php
+/storage/configuration/key.php
+
+
+# Exclude hidden system files
+#
+*[Tt]humbs.db
+*.DS_Store
+*.Trashes
+
+
+# Exclude IDE-specific project files
+#
+*.iml
+/.idea
+/.project
+/.buildpath
+/.settings
+/nbproject

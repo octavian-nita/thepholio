@@ -1,0 +1,172 @@
+{
+	"routes": {
+
+		"/home/": {
+			"template": "index"
+		},
+
+		"/feed/content/recent.rss": {
+			"template": "contents.rss",
+			"filters": [ "order_by=published_on", "order_direction=desc" ]
+		},
+
+		"/feed/albums/:id/recent.rss": {
+			"template": "album.rss",
+			"filters": [ "order_by=published_on", "order_direction=desc" ]
+		},
+
+		"/feed/essays/recent.rss": {
+			"template": "essays.rss",
+			"filters": [ "order_by=published_on", "order_direction=desc" ]
+		},
+
+		"/feed/timeline/recent.rss": {
+			"template": "timeline.rss"
+		}
+
+	},
+
+	"templates": {
+
+		"index": {
+			"name": "Home",
+			"description": "Displays all featured images and videos",
+			"source": "featured_content"
+		},
+
+		"albums": {
+			"name": "Albums",
+			"description": "Displays all top public albums and sets",
+			"source": "albums"
+		},
+
+		"album": {
+			"name": "Album",
+			"description": "Displays a single album and its content",
+			"source": "album"
+		},
+
+		"album.rss": {
+			"name": "Albums RSS",
+			"description": "Public albums RSS feed",
+			"source": "album"
+		},
+
+		"archive.albums": {
+			"name": "Albums archive",
+			"description": "Displays all public albums sorted by tag, category or date"
+		},
+
+		"sets": {
+			"name": "Sets",
+			"description": "Displays all top public sets",
+			"source": "sets"
+		},
+
+		"set": {
+			"name": "Set",
+			"description": "Displays a single set and its content",
+			"source": "set"
+		},
+
+		"contents": {
+			"name": "Content",
+			"description": "Displays all images and videos sorted by date",
+			"source": "contents"
+		},
+
+		"favorites": {
+			"name": "Favorites",
+			"description": "Displays all favorite images and videos",
+			"source": "favorites"
+		},
+
+		"contents.rss": {
+			"name": "Content RSS",
+			"description": "Content RSS feed",
+			"source": "contents"
+		},
+
+		"archive.contents": {
+			"name": "Content archive",
+			"description": "Displays all public images and videos sorted by tag, category or date"
+		},
+
+		"content": {
+			"name": "Content",
+			"description": "Displays a single photo or video",
+			"source": "content"
+		},
+
+		"essays": {
+			"name": "Essays",
+			"description": "Displays all published essays",
+			"source": "essays"
+		},
+
+		"essays.rss": {
+			"name": "Essays RSS",
+			"description": "Essays RSS feed",
+			"source": "essays"
+		},
+
+		"essay": {
+			"name": "Essay",
+			"description": "Displays a single essay",
+			"source": "essay"
+		},
+
+		"archive.essays": {
+			"name": "Essays archive",
+			"description": "Displays all published essays sorted by tag, category or date"
+		},
+
+		"page": {
+			"name": "Page",
+			"description": "Displays a custom page",
+			"source": "page"
+		},
+
+		"tags": {
+			"name": "Tags",
+			"description": "Display all tags",
+			"source": "tags"
+		},
+
+		"tag": {
+			"name": "Tag detail",
+			"description": "Single tag and its associated content",
+			"source": "tag"
+		},
+
+		"categories": {
+			"name": "Categories",
+			"description": "Display all categories",
+			"source": "categories"
+		},
+
+		"category": {
+			"name": "Category detail",
+			"description": "Single Category and its associated content",
+			"source": "category"
+		},
+
+		"timeline": {
+			"name": "Timeline",
+			"description": "Stream of all essays, albums and content added to your site.",
+			"source": "timeline"
+		},
+
+		"date": {
+			"name": "Timeline archive",
+			"description": "All public activity for a particular year, month or day."
+		},
+
+		"timeline.rss": {
+			"name": "Timeline RSS",
+			"description": "Stream of all essays, albums and content added to your site in RSS form.",
+			"source": "timeline"
+		}
+
+	}
+}

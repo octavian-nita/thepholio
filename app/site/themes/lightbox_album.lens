@@ -1,0 +1,11 @@
+<html>
+<head>
+<koken:title />
+<koken:load>
+	<koken:shift>
+		<meta http-equiv="refresh" content="0;URL='<koken:link lightbox="true" echo="true" />'">
+	</koken:shift>
+</koken:load>
+</head>
+<body></body>
+</html>

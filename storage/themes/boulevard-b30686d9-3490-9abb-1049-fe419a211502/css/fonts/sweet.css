@@ -1,0 +1,12 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+@import url(//fonts.googleapis.com/css?family=Nixie+One);
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+header h1, header h2, #album-intro h1, article h1 {
+	font-family: 'Nixie One', Georgia, serif;
+	/* nixie only has one weight. force it to 400 to prevent rendering probs */
+	font-weight:400 !important;
+}

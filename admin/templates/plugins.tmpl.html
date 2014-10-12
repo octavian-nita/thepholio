@@ -1,0 +1,45 @@
+<script id="kokenLibrarySidebar" type="text/html">
+<!-- ko foreach: $data.sections() -->
+<div data-event="toggle_visibility" class="col-head" data-bind="visible: $data.visibility == true">
+	<span class="in">
+		<a href="#" class="arrow-toggle open fold"></a>
+		<h6><a href="#" class="fold" data-bind="text: $data.label, attr: { title: $data.label }"></a></h6>
+	</span>
+</div>
+<div class="col-group" data-bind="visible: $data.visibility == true">
+	<div data-bind="foreach: { data: $data.fields, as: 'item' }">
+		<div class="col-row single">
+			<div class="label">
+				<label data-bind="text: $data.label, attr: { for: 'plugin_' + $data.key }"></label>
+			</div>
+
+			<div class="value">
+				<!-- ko if: item.type == 'boolean' -->
+				<input type="checkbox" data-bind="checked: item.value, attr: { name: $data.key, id: 'plugin_' + $data.key }" />
+				<!-- /ko -->
+
+				<!-- ko if: item.type == 'color' -->
+				<input type="ccolor" data-bind="value: item.value, attr: { name: $data.key, id: 'plugin_' + $data.key }" />
+				<!-- /ko -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /ko -->
+</script>
+
+<script id="kokenLibraryNavigation" type="text/html">
+<li class="plugin-library-nav-item">
+	<a class="item" data-bind="attr: { href: $data.url }">
+		<span class="in"><span data-bind="attr: { class: 'icon16 ' + $data.icon_class() }, text: $data.title"></span>
+	</a>
+</li>
+</script>
+
+<script id="kokenSheetSection" type="text/html">
+<section data-bind="template: $data.html, attr: { id: $data.id, class: $data.class }" style="display: none;margin-bottom:0"></section>
+</script>
+
+<script id="kokenSettingsEdit" type="text/html">
+<div data-bind="template: $data.html"></div>
+</script>
