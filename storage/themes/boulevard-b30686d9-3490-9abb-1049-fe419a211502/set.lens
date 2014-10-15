@@ -1,8 +1,8 @@
 <koken:include file="inc/head.html" />
 
-	<koken:include file="inc/header-albums.html" />
-
 	<koken:load>
+
+		<koken:include file="inc/header-set.html" />
 
 		<koken:head>
 			<meta property="og:site_name" content="{{ site.title }}" />
